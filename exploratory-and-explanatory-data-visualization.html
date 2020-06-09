@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 3 Difference between exploratory and explanatory data visualization | Rock Your Resume with R</title>
-  <meta name="description" content="Chapter 3 Difference between exploratory and explanatory data visualization | Rock Your Resume with R" />
+  <title>3 Exploratory and explanatory data visualization | Rock Your Resume with R</title>
+  <meta name="description" content="3 Exploratory and explanatory data visualization | Rock Your Resume with R" />
   <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 3 Difference between exploratory and explanatory data visualization | Rock Your Resume with R" />
+  <meta property="og:title" content="3 Exploratory and explanatory data visualization | Rock Your Resume with R" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 3 Difference between exploratory and explanatory data visualization | Rock Your Resume with R" />
+  <meta name="twitter:title" content="3 Exploratory and explanatory data visualization | Rock Your Resume with R" />
   
   
   
@@ -31,7 +31,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="why-visualization-matters.html"/>
+<link rel="prev" href="data-visualization-101.html"/>
 <link rel="next" href="base-r-syntax-and-data-type.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -52,43 +52,6 @@
 
 
 
-<style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -103,7 +66,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">A Minimal Book Example</a></li>
+<li><a href="./">Rock Your Resume with R</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome!</a></li>
@@ -111,24 +74,38 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="" data-path="why-learn-r.html"><a href="why-learn-r.html#pros-and-cons-of-r"><i class="fa fa-check"></i>Pros and Cons of R</a></li>
 <li class="chapter" data-level="" data-path="why-learn-r.html"><a href="why-learn-r.html#learning-a-programing-language-is-an-investment-choose-wisely"><i class="fa fa-check"></i>Learning a programing language is an investment, choose wisely</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="why-visualization-matters.html"><a href="why-visualization-matters.html"><i class="fa fa-check"></i><b>2</b> Why visualization matters?</a></li>
-<li class="chapter" data-level="3" data-path="difference-between-exploratory-and-explanatory-data-visualization.html"><a href="difference-between-exploratory-and-explanatory-data-visualization.html"><i class="fa fa-check"></i><b>3</b> Difference between exploratory and explanatory data visualization</a></li>
+<li class="chapter" data-level="2" data-path="data-visualization-101.html"><a href="data-visualization-101.html"><i class="fa fa-check"></i><b>2</b> Data visualization 101</a><ul>
+<li class="chapter" data-level="" data-path="data-visualization-101.html"><a href="data-visualization-101.html#what-is-data-visualization"><i class="fa fa-check"></i>What is data visualization?</a></li>
+<li class="chapter" data-level="" data-path="data-visualization-101.html"><a href="data-visualization-101.html#why-visualization-matters"><i class="fa fa-check"></i>Why visualization matters?</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="exploratory-and-explanatory-data-visualization.html"><a href="exploratory-and-explanatory-data-visualization.html"><i class="fa fa-check"></i><b>3</b> Exploratory and explanatory data visualization</a></li>
 <li class="chapter" data-level="4" data-path="base-r-syntax-and-data-type.html"><a href="base-r-syntax-and-data-type.html"><i class="fa fa-check"></i><b>4</b> Base R syntax and data type</a><ul>
 <li class="chapter" data-level="4.1" data-path="base-r-syntax-and-data-type.html"><a href="base-r-syntax-and-data-type.html#data-type"><i class="fa fa-check"></i><b>4.1</b> Data type</a></li>
 <li class="chapter" data-level="4.2" data-path="base-r-syntax-and-data-type.html"><a href="base-r-syntax-and-data-type.html#create-a-variable-and-assign-a-value"><i class="fa fa-check"></i><b>4.2</b> Create a variable and assign a value</a></li>
 <li class="chapter" data-level="4.3" data-path="base-r-syntax-and-data-type.html"><a href="base-r-syntax-and-data-type.html#create-variables-and-calculate"><i class="fa fa-check"></i><b>4.3</b> Create variables and calculate</a></li>
-<li class="chapter" data-level="4.4" data-path="base-r-syntax-and-data-type.html"><a href="base-r-syntax-and-data-type.html#create-a-new-variable-with-the-sum"><i class="fa fa-check"></i><b>4.4</b> Create a new variable with the sum</a></li>
+<li class="chapter" data-level="4.4" data-path="base-r-syntax-and-data-type.html"><a href="base-r-syntax-and-data-type.html#create-a-new-variable-and-assign-the-sum"><i class="fa fa-check"></i><b>4.4</b> Create a new variable and assign the sum</a></li>
 <li class="chapter" data-level="4.5" data-path="base-r-syntax-and-data-type.html"><a href="base-r-syntax-and-data-type.html#use-functions"><i class="fa fa-check"></i><b>4.5</b> Use functions</a></li>
 <li class="chapter" data-level="4.6" data-path="base-r-syntax-and-data-type.html"><a href="base-r-syntax-and-data-type.html#make-a-data-frame"><i class="fa fa-check"></i><b>4.6</b> Make a data frame</a></li>
 <li class="chapter" data-level="4.7" data-path="base-r-syntax-and-data-type.html"><a href="base-r-syntax-and-data-type.html#create-a-simple-plot"><i class="fa fa-check"></i><b>4.7</b> Create a simple plot</a></li>
+<li class="chapter" data-level="4.8" data-path="base-r-syntax-and-data-type.html"><a href="base-r-syntax-and-data-type.html#use-a-pre-made-dataset-to-examine-and-plot-the-data"><i class="fa fa-check"></i><b>4.8</b> Use a pre-made dataset to examine and plot the data</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="practice-problem-1.html"><a href="practice-problem-1.html"><i class="fa fa-check"></i><b>5</b> Practice Problem 1</a><ul>
+<li class="chapter" data-level="5" data-path="snippets-of-dplyr-and-ggplot.html"><a href="snippets-of-dplyr-and-ggplot.html"><i class="fa fa-check"></i><b>5</b> Snippets of dplyr and ggplot</a><ul>
+<li class="chapter" data-level="5.1" data-path="snippets-of-dplyr-and-ggplot.html"><a href="snippets-of-dplyr-and-ggplot.html#what-is-dplyr"><i class="fa fa-check"></i><b>5.1</b> What is dplyr?</a></li>
+<li class="chapter" data-level="5.2" data-path="snippets-of-dplyr-and-ggplot.html"><a href="snippets-of-dplyr-and-ggplot.html#why-is-dplyr-so-handy"><i class="fa fa-check"></i><b>5.2</b> Why is dplyr so handy?</a></li>
+<li class="chapter" data-level="5.3" data-path="snippets-of-dplyr-and-ggplot.html"><a href="snippets-of-dplyr-and-ggplot.html#filter-subset-data-using-dplyr"><i class="fa fa-check"></i><b>5.3</b> Filter/ subset data using dplyr</a></li>
+<li class="chapter" data-level="5.4" data-path="snippets-of-dplyr-and-ggplot.html"><a href="snippets-of-dplyr-and-ggplot.html#filter-data-with-multiple-conditions-using-dplyr"><i class="fa fa-check"></i><b>5.4</b> Filter data with multiple conditions using dplyr</a></li>
+<li class="chapter" data-level="5.5" data-path="snippets-of-dplyr-and-ggplot.html"><a href="snippets-of-dplyr-and-ggplot.html#what-is-ggplot"><i class="fa fa-check"></i><b>5.5</b> What is ggplot?</a></li>
+<li class="chapter" data-level="5.6" data-path="snippets-of-dplyr-and-ggplot.html"><a href="snippets-of-dplyr-and-ggplot.html#why-is-ggplot-so-handy"><i class="fa fa-check"></i><b>5.6</b> Why is ggplot so handy?</a></li>
+<li class="chapter" data-level="5.7" data-path="snippets-of-dplyr-and-ggplot.html"><a href="snippets-of-dplyr-and-ggplot.html#create-your-first-line-graph-using-ggplot"><i class="fa fa-check"></i><b>5.7</b> Create your first line graph using ggplot</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="practice-problem-1.html"><a href="practice-problem-1.html"><i class="fa fa-check"></i><b>6</b> Practice Problem 1</a><ul>
 <li class="chapter" data-level="" data-path="practice-problem-1.html"><a href="practice-problem-1.html#lets-make-anscombes-quartet"><i class="fa fa-check"></i>Let’s make Anscombe's quartet</a></li>
-<li class="chapter" data-level="5.1" data-path="practice-problem-1.html"><a href="practice-problem-1.html#set-up-an-environement-and-load-data"><i class="fa fa-check"></i><b>5.1</b> Set up an environement and load data</a></li>
-<li class="chapter" data-level="5.2" data-path="practice-problem-1.html"><a href="practice-problem-1.html#check-data-structure-and-clean-data-done-for-today"><i class="fa fa-check"></i><b>5.2</b> Check data structure and clean data (done for today)</a></li>
-<li class="chapter" data-level="5.3" data-path="practice-problem-1.html"><a href="practice-problem-1.html#check-data-distributions"><i class="fa fa-check"></i><b>5.3</b> Check data distributions</a></li>
+<li class="chapter" data-level="6.1" data-path="practice-problem-1.html"><a href="practice-problem-1.html#set-up-an-environement-and-load-data"><i class="fa fa-check"></i><b>6.1</b> Set up an environement and load data</a></li>
+<li class="chapter" data-level="6.2" data-path="practice-problem-1.html"><a href="practice-problem-1.html#check-data-structure-and-clean-data-done-for-today"><i class="fa fa-check"></i><b>6.2</b> Check data structure and clean data (done for today)</a></li>
+<li class="chapter" data-level="6.3" data-path="practice-problem-1.html"><a href="practice-problem-1.html#check-data-distributions"><i class="fa fa-check"></i><b>6.3</b> Check data distributions</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="temporaly-r-platform.html"><a href="temporaly-r-platform.html"><i class="fa fa-check"></i>Temporaly R Platform</a></li>
+<li class="chapter" data-level="" data-path="temporaly-r-platform-1.html"><a href="temporaly-r-platform-1.html"><i class="fa fa-check"></i>Temporaly R Platform</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -149,15 +126,16 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="difference-between-exploratory-and-explanatory-data-visualization" class="section level1">
-<h1><span class="header-section-number">Chapter 3</span> Difference between exploratory and explanatory data visualization</h1>
+<div id="exploratory-and-explanatory-data-visualization" class="section level1">
+<h1><span class="header-section-number">3</span> Exploratory and explanatory data visualization</h1>
+
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="why-visualization-matters.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="data-visualization-101.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="base-r-syntax-and-data-type.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
@@ -189,8 +167,8 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/index.Rmd",
-"text": "Edit"
+"link": null,
+"text": null
 },
 "history": {
 "link": null,
@@ -200,7 +178,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
+"download": ["06-05-20_r_wokshop_test.pdf", "06-05-20_r_wokshop_test.epub"],
 "toc": {
 "collapse": "subsection"
 }

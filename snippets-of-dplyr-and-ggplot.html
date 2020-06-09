@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>4 Base R syntax and data type | Rock Your Resume with R</title>
-  <meta name="description" content="4 Base R syntax and data type | Rock Your Resume with R" />
+  <title>5 Snippets of dplyr and ggplot | Rock Your Resume with R</title>
+  <meta name="description" content="5 Snippets of dplyr and ggplot | Rock Your Resume with R" />
   <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="4 Base R syntax and data type | Rock Your Resume with R" />
+  <meta property="og:title" content="5 Snippets of dplyr and ggplot | Rock Your Resume with R" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="4 Base R syntax and data type | Rock Your Resume with R" />
+  <meta name="twitter:title" content="5 Snippets of dplyr and ggplot | Rock Your Resume with R" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="exploratory-and-explanatory-data-visualization.html"/>
-<link rel="next" href="snippets-of-dplyr-and-ggplot.html"/>
+<link rel="prev" href="base-r-syntax-and-data-type.html"/>
+<link rel="next" href="practice-problem-1.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -163,232 +163,172 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="base-r-syntax-and-data-type" class="section level1">
-<h1><span class="header-section-number">4</span> Base R syntax and data type</h1>
-<div id="data-type" class="section level2">
-<h2><span class="header-section-number">4.1</span> Data type</h2>
-<ul>
-<li>Charactor vector (srting and/ or factor): defined by using &quot; &quot;
-<ul>
-<li>(e.g.) &quot;Jack&quot;, &quot;Rose&quot;</li>
-<li>Cannot perform mathmatical calculations</li>
-</ul></li>
-<li>Numeric vector (double, integer etc...): numbers are written as is
-<ul>
-<li>(e.g.) 100, 200</li>
-<li>Can perfom a mathmatical calculations <br /></li>
-</ul></li>
-<li>Logical vecor: TRUE or FALSE</li>
-</ul>
-<p>Let's practice!</p>
-<ul>
-<li>write a code <em>100 + 200</em> as a numerical vector</li>
-<li>write a code <em>100 + 200</em> as a character vector</li>
-</ul>
-<iframe width="100%" height="400" src="https://rdrr.io/snippets/embed/?code=" frameborder="0">
-</iframe>
+<div id="snippets-of-dplyr-and-ggplot" class="section level1">
+<h1><span class="header-section-number">5</span> Snippets of dplyr and ggplot</h1>
+<p>To be honest, these two packages are the game changers. I use them almost everyday along with a couple of other packages.</p>
+<div id="what-is-dplyr" class="section level2">
+<h2><span class="header-section-number">5.1</span> What is dplyr?</h2>
+<p>dplyr is an R package that allows you to perform data manipulation easily.</p>
 </div>
-<div id="create-a-variable-and-assign-a-value" class="section level2">
-<h2><span class="header-section-number">4.2</span> Create a variable and assign a value</h2>
+<div id="why-is-dplyr-so-handy" class="section level2">
+<h2><span class="header-section-number">5.2</span> Why is dplyr so handy?</h2>
 <ul>
-<li>R is case sensitive
+<li>Once you are out of your class assignments, you will need to perform data cleaning and manipulation by yourself to perform a data analysis.
 <ul>
-<li>X and x are two different variables for R</li>
-<li>Variable names cannot have a space in between
-<ul>
-<li>public health will not work as a variable name. Instead, you can make it as public_health, publicHealth etc...</li>
+<li>Real world datasets are usually messy, unlike the dataset you get from your professors for your assignments (yes, they usually clean the data for you)</li>
+<li>We say that data analysists spend about 70% of their project time on data cleaning/ preparations</li>
 </ul></li>
-<li>You cannot start variable names with numbers
-<ul>
-<li>7data will not work. Instead, name it data7</li>
-</ul></li>
-<li>Variable names need to be descriptive and easy to understand
-<ul>
-<li>Otherwise, it will confuse you in the end <br /> <br /></li>
-</ul></li>
-</ul></li>
-<li>if you want to make a variable x and assign 1 as a value
-<ul>
-<li>&quot;&lt;-&quot; is the symbol we use to assign values in R</li>
-<li>&quot;#&quot; is to make comments on an R script
-<ul>
-<li>Make a habit to write discriptive comments, becasue you will often forget what this code was for</li>
-<li>Try to keep you script neet and clean. This will help you to have less bugs and makes it easy to debug</li>
-</ul></li>
-</ul></li>
+<li>The dplyr package helps you to perform data cleaning tasks</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="dv">1</span>
-x <span class="co">#check the variable</span></code></pre></div>
-<p>Let's practice!</p>
-<ul>
-<li>Create a variable pineapples and assign 120 as a value
-<ul>
-<li>Check the variable</li>
-</ul></li>
-</ul>
-<iframe width="100%" height="400" src="https://rdrr.io/snippets/embed/?code=" frameborder="0">
-</iframe>
 </div>
-<div id="create-variables-and-calculate" class="section level2">
-<h2><span class="header-section-number">4.3</span> Create variables and calculate</h2>
+<div id="filter-subset-data-using-dplyr" class="section level2">
+<h2><span class="header-section-number">5.3</span> Filter/ subset data using dplyr</h2>
+<p>Let's say that you'd want to select only the May data from the airquality dataset we used in Chapter 4. You can do that pretty easily by using dplyr</p>
 <ul>
-<li>Create variables x and y.</li>
-<li>Assign 1 as a value for x, 4 as a value of y</li>
-<li>Add them up</li>
-<li>Check if x is bigger than y</li>
-</ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#create variables x, y and assign values</span>
-x &lt;-<span class="st"> </span><span class="dv">1</span>
-y &lt;-<span class="st"> </span><span class="dv">4</span>
-
-<span class="co">#add x and y</span>
-x <span class="op">+</span><span class="st"> </span>y
-
-<span class="co">#examine using logical operator </span>
-x <span class="op">&gt;</span><span class="st"> </span>y</code></pre></div>
-<p>Let's practice!</p>
+<li>Load the dplyr package
 <ul>
-<li>Create a variable pineapples and assign 120 as a value.</li>
-<li>Create a variable strawberries and assign 70 as a value.</li>
-<li>Add them up using variable names</li>
-<li>Check if pineapples are larger than strawberries using a logical operator</li>
-</ul>
-<iframe width="100%" height="400" src="https://rdrr.io/snippets/embed/?code=" frameborder="0">
-</iframe>
-</div>
-<div id="create-a-new-variable-and-assign-the-sum" class="section level2">
-<h2><span class="header-section-number">4.4</span> Create a new variable and assign the sum</h2>
-<ul>
-<li>Create a variable z and assign the sum of x + y</li>
-</ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="dv">1</span>
-y &lt;-<span class="st"> </span><span class="dv">4</span>
-
-<span class="co">#create a new variable z and assign the sum of x and y</span>
-z &lt;-<span class="st"> </span>x <span class="op">+</span><span class="st"> </span>y
-
-<span class="co">#check the value of z</span>
-z</code></pre></div>
-<p>Let's practice!</p>
-<ul>
-<li>Create a variable pineapples and assign 120 as a value.</li>
-<li>Create a variable strawberries and assign 70 as a value.</li>
-<li>Create a new variable pineberries and assign the sum of pineapples and strawberries</li>
-<li>Check the value of pineberries</li>
-</ul>
-<iframe width="100%" height="400" src="https://rdrr.io/snippets/embed/?code=" frameborder="0">
-</iframe>
-</div>
-<div id="use-functions" class="section level2">
-<h2><span class="header-section-number">4.5</span> Use functions</h2>
-<ul>
-<li>Calcurate the sum of x, y and z</li>
-</ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="dv">1</span>
-y &lt;-<span class="st"> </span><span class="dv">4</span>
-z &lt;-<span class="st"> </span>x <span class="op">+</span><span class="st"> </span>y
-
-<span class="co">#sum up x, y and z using the sum() function</span>
-<span class="kw">sum</span>(x, y, z)</code></pre></div>
-<p>Let's practice!</p>
-<ul>
-<li>Create a variable pineapples and assign 120 as a value.</li>
-<li>Create a variable strawberries and assign 70 as a value.</li>
-<li>Create a new variable pineberries and assign the sum of pineapples and strawberries</li>
-<li>Sum up pinabbles, strawberries, and pineberries using the sum() function</li>
-</ul>
-<iframe width="100%" height="400" src="https://rdrr.io/snippets/embed/?code=" frameborder="0">
-</iframe>
-</div>
-<div id="make-a-data-frame" class="section level2">
-<h2><span class="header-section-number">4.6</span> Make a data frame</h2>
-<ul>
-<li>Make a data frame &quot;df1&quot;
-<ul>
-<li>(explanation 1). &quot;variable&quot; is a column name, c(&quot;&quot;, &quot;&quot;,) is to add multiple vairiables. this says assign x to the &quot;variable&quot; column, row 1. assign y to the &quot;variable&quot; column, row 2. assign z to the &quot;variable&quot; column, row 3.</li>
-<li>(explanation 2). &quot;value&quot; is a column name. this says that assign 1 to the &quot;value&quot; column, row 1. assign 4 to the &quot;value&quot; column, row 2. assign 10 to the &quot;value&quot; column, row 3.</li>
+<li>for the very first time, you need to install the package: install.packages(&quot;dplyr&quot;) or install.packages(&quot;tidyverse&quot;&quot;)</li>
 </ul></li>
-<li>Calcurate the mean of x, y and z</li>
-</ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df1 &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="st">&quot;variable&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;x&quot;</span>, <span class="st">&quot;y&quot;</span>, <span class="st">&quot;z&quot;</span>), <span class="co">#(explanation 1). </span>
-                   <span class="st">&quot;value&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">10</span>)) <span class="co">#(explanation 2). </span>
-
-<span class="kw">str</span>(df1)
-
-<span class="co">#calcurate mean</span>
-<span class="kw">mean</span>(df1<span class="op">$</span>value) <span class="co">#&quot;$&quot; is select &quot;value column&quot; from df1</span></code></pre></div>
-<p>Let's practice!</p>
+<li>Load the airquality dataset</li>
+<li>Make sure the data structure
 <ul>
-<li>Create a dataframe &quot;fruits,&quot; which contains two columns (&quot;fruitType&quot; and &quot;amount&quot;)
-<ul>
-<li>pineapples, which the value is 120</li>
-<li>strawberries, which the value is 70</li>
-<li>pineberries, which the value is 190</li>
+<li>glimpse() is a dplyr fucntion to check data structures</li>
 </ul></li>
-<li>Check the structure of the dataframe</li>
-<li>Calculate the mean of &quot;amount&quot;&quot;</li>
-</ul>
-<iframe width="100%" height="400" src="https://rdrr.io/snippets/embed/?code=" frameborder="0">
-</iframe>
-</div>
-<div id="create-a-simple-plot" class="section level2">
-<h2><span class="header-section-number">4.7</span> Create a simple plot</h2>
+<li>Filter the dataframe by datapoints that are May
 <ul>
-<li>Create a data frame &quot;firstHalf&quot;</li>
-<li>Create a simple barplot using the &quot;barplot()&quot; function</li>
-</ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">firstHalf &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="st">&quot;month&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Jan&quot;</span>, <span class="st">&quot;Feb&quot;</span>, <span class="st">&quot;Mar&quot;</span>, <span class="st">&quot;Apr&quot;</span>, <span class="st">&quot;May&quot;</span>, <span class="st">&quot;June&quot;</span>), 
-                   <span class="st">&quot;value&quot;</span> =<span class="st"> </span><span class="kw">c</span>(<span class="dv">150</span>, <span class="dv">200</span>, <span class="dv">15</span>, <span class="dv">70</span>, <span class="dv">300</span>, <span class="dv">60</span>)) 
-
-<span class="co">#create a bar plot. names.arg is to label each bar</span>
-<span class="kw">barplot</span>(fristHalf<span class="op">$</span>value, <span class="dt">names.arg =</span> <span class="kw">c</span>(<span class="st">&quot;Jan&quot;</span>, <span class="st">&quot;Feb&quot;</span>, <span class="st">&quot;Mar&quot;</span>, <span class="st">&quot;Apr&quot;</span>, <span class="st">&quot;May&quot;</span>, <span class="st">&quot;June&quot;</span>)) </code></pre></div>
-<p>Let's practice!</p>
+<li>%&gt;% is called piping. This means that grab from previous action/ item
 <ul>
-<li>Create a data frame &quot;secondHalf.&quot; Monthly values are as follows:
-<ul>
-<li>July, 250</li>
-<li>August, 10</li>
-<li>September, 600</li>
-<li>October, 120</li>
-<li>November, 80</li>
-<li>December, 50</li>
+<li>In this case, it is telling to grab airquality dataset and then select the data that the &quot;Month&quot; column is 5</li>
 </ul></li>
-<li>Create a barplot using the &quot;barplot()&quot; function
+<li>Be aware that we use double equal signs (==) to tell R that we need the value that is the same as 5 in the &quot;Month&quot; column
 <ul>
-<li>Make sure to label each bars</li>
+<li>If you use a signle equal sign (=), R will think that you are asking to assign the value 5 to the &quot;Month&quot; column, which will give you an error message.</li>
+<li>Single equal sign (=) is the same as (&lt;-)</li>
+</ul></li>
 </ul></li>
 </ul>
-<iframe width="100%" height="400" src="https://rdrr.io/snippets/embed/?code=" frameborder="0">
-</iframe>
-</div>
-<div id="use-a-pre-made-dataset-to-examine-and-plot-the-data" class="section level2">
-<h2><span class="header-section-number">4.8</span> Use a pre-made dataset to examine and plot the data</h2>
-<ul>
-<li>R has dataset packages you can use for your analysis</li>
-<li>Today, let's use <a href="https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/airquality.html">the New York Air Quality Measurements data (May-September, 1973)</a></li>
-<li>Load the dataset
-<ul>
-<li>Check how many observations (data points) are they?</li>
-<li>Calculate the mean maximum daily tempurature</li>
-<li>Make a histgram of the maximum daily tempurature</li>
-</ul></li>
-</ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#load the dataset</span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#load dplyr </span>
+<span class="kw">library</span>(dplyr)
+
+<span class="co">#load the dataset </span>
 airquality
 
-<span class="co">#calculate the mean maximum daily tempurature of the dataset</span>
-<span class="kw">mean</span>(airquality<span class="op">$</span>Temp)
+<span class="co">#check the data structure </span>
+<span class="kw">glimpse</span>(airquality)
 
-<span class="co">#make a histgram of the maximum daily tempurature</span>
-<span class="kw">hist</span>(airquality<span class="op">$</span>Temp)</code></pre></div>
+<span class="co">#filter May data from the dataframe </span>
+airquality <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(Month <span class="op">==</span><span class="st"> </span><span class="dv">5</span>)
+
+<span class="co">#if you want to make a data frame called &quot;may&quot; which has only May data </span>
+may &lt;-<span class="st"> </span>airquality <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(Month <span class="op">==</span><span class="st"> </span><span class="dv">5</span>)</code></pre></div>
 <p>Let's practice!</p>
 <ul>
-<li>Load the airquality dataset</li>
-<li>Calcurate the mean of the average wind speed of the dataset</li>
-<li>Make a histgram of the average wind speed</li>
+<li>Load dplyr package</li>
+<li>Load airquality dataset</li>
+<li>Check the data structure</li>
+<li>Filter July data from the data frame</li>
+<li>Create a data frame called &quot;july&quot;</li>
 </ul>
 <iframe width="100%" height="400" src="https://rdrr.io/snippets/embed/?code=" frameborder="0">
 </iframe>
+</div>
+<div id="filter-data-with-multiple-conditions-using-dplyr" class="section level2">
+<h2><span class="header-section-number">5.4</span> Filter data with multiple conditions using dplyr</h2>
+<p>Now you know how to filter the data using dplyr. But what if you want to know how many days in May, 1973 were hotter than 74 degrees?</p>
+<ul>
+<li>Load dplyr package</li>
+<li>Load airquality dataset</li>
+<li>Filter May and Temperature &gt; 74
+<ul>
+<li>Notice that you use two pipes for this operation This code tells R, grab the airquality data and select May. And then from there, select the days that are hotter than 74</li>
+<li>logical operators</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Operator</th>
+<th align="center">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">&lt;</td>
+<td align="center">less than</td>
+</tr>
+<tr class="even">
+<td align="center">&lt;=</td>
+<td align="center">less than or equal to</td>
+</tr>
+<tr class="odd">
+<td align="center">&gt;</td>
+<td align="center">greater than</td>
+</tr>
+<tr class="even">
+<td align="center">&gt;=</td>
+<td align="center">greater than or equal to</td>
+</tr>
+<tr class="odd">
+<td align="center">==</td>
+<td align="center">exactly equal to</td>
+</tr>
+<tr class="even">
+<td align="center">!=</td>
+<td align="center">not equal to</td>
+</tr>
+</tbody>
+</table></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#load dplyr </span>
+<span class="kw">library</span>(dplyr)
+
+<span class="co">#load the dataset </span>
+airquality
+
+<span class="co">#filter May and temp &gt; 74 from the dataframe </span>
+airquality <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">filter</span>(Month <span class="op">==</span><span class="st"> </span><span class="dv">5</span>) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">filter</span>(Temp <span class="op">&gt;</span><span class="st"> </span><span class="dv">74</span>)</code></pre></div>
+<p>Let's practice!</p>
+<ul>
+<li>Load dplyr package</li>
+<li>Load airquality dataset</li>
+<li>Filter the dataset by July and Temperature that are greater than or equal to 85</li>
+<li>Create a subsetted data frame called &quot;julyWarm&quot;</li>
+</ul>
+<iframe width="100%" height="400" src="https://rdrr.io/snippets/embed/?code=" frameborder="0">
+</iframe>
+</div>
+<div id="what-is-ggplot" class="section level2">
+<h2><span class="header-section-number">5.5</span> What is ggplot?</h2>
+<p>ggplot is an R package that allows you to create nice-looking data visualization pieces</p>
+</div>
+<div id="why-is-ggplot-so-handy" class="section level2">
+<h2><span class="header-section-number">5.6</span> Why is ggplot so handy?</h2>
+<ul>
+<li>Data visualization is an important piece of your data analysis plan, because you need to tell your audience a story of what you found in a understandable and easily digestable manner
+<ul>
+<li>R can be your one-stop-shop for your data analysis project
+<ul>
+<li>ggplot will let you create graphs without using other software</li>
+</ul></li>
+</ul></li>
+<li>You don't need to know design theory to make nice visualizations
+<ul>
+<li>ggplot's preloaded theme/ color schemes will help to create a nice visualization</li>
+</ul></li>
+<li>If you are a design person like me, ggplot gives you to a freedom to customize your plots/ graphs
+<ul>
+<li>You can change font size, font color (using rbg or hex number), line types and more!</li>
+</ul></li>
+<li>One you design a base &quot;template&quot; of your visual piece, you can reuse it over and over again by copy and pasting the code!</li>
+<li>Good news for mappers like me, you can make maps using ggplot as well
+<ul>
+<li><a href="https://maiuchi.github.io/mapping_in_R/">Making a COVID-19 Map in R</a></li>
+</ul></li>
+</ul>
+</div>
+<div id="create-your-first-line-graph-using-ggplot" class="section level2">
+<h2><span class="header-section-number">5.7</span> Create your first line graph using ggplot</h2>
 
 </div>
 </div>
@@ -397,8 +337,8 @@ airquality
           </div>
         </div>
       </div>
-<a href="exploratory-and-explanatory-data-visualization.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="snippets-of-dplyr-and-ggplot.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="base-r-syntax-and-data-type.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="practice-problem-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
